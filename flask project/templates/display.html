@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Users</title>
+  <link rel="stylesheet" href="../static/css/bootstrap.css">
+  <script src="../static/js/bootstrap.js"></script>
+
+</head>
+<body>
+ <div class="container bg-info">
+  <h2>Users</h2>
+  <section class="row">
+    {% for record in records %}
+    <div class="col-md-4 mb-3 mt-3">
+      <div class="card shadow">
+        <img src="../static/images/{{record[5]}}" alt="" width="300" height="300">
+        <h5>Username : {{record[1]}}</h3>
+        <h5>Email : {{record[4]}}</h3>
+
+      </div>
+
+    </div>
+    {% endfor %}
+
+  </section>
+
+
+ </div>
+  
+</body>
+</html>
